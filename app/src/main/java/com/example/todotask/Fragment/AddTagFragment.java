@@ -18,8 +18,8 @@ import android.widget.TextView;
 
 import com.example.todotask.CreateDatabase;
 import com.example.todotask.R;
-import com.example.todotask.TagAddIconAdapter;
-import com.example.todotask.TagIconListener;
+import com.example.todotask.Adapter.TagAddIconAdapter;
+import com.example.todotask.Adapter.TagIconListener;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;

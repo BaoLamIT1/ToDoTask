@@ -14,7 +14,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.todotask.CreateDatabase;
 import com.example.todotask.R;
-import com.example.todotask.TagIconListener;
 import com.example.todotask.Model.TagsModel;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 

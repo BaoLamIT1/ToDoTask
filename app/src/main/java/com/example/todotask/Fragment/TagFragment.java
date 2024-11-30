@@ -1,4 +1,4 @@
-package com.example.todotask;
+package com.example.todotask.Fragment;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
@@ -14,12 +14,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import com.example.todotask.CreateDatabase;
+import com.example.todotask.R;
+import com.example.todotask.Adapter.TagAdapter;
+import com.example.todotask.TagIconListener;
+import com.example.todotask.Model.TagsModel;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 
 
-public class TagFragment extends Fragment implements TagIconListener{
+public class TagFragment extends Fragment implements TagIconListener {
 
     private RecyclerView recyclerView;
     private ArrayList<TagsModel> tagsModels= new ArrayList<>();

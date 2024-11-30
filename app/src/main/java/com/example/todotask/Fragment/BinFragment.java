@@ -1,4 +1,4 @@
-package com.example.todotask;
+package com.example.todotask.Fragment;
 
 import android.os.Bundle;
 import android.view.ContextMenu;
@@ -9,12 +9,17 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.todotask.CreateDatabase;
+import com.example.todotask.R;
+import com.example.todotask.TagIconListener;
+import com.example.todotask.Model.TagsModel;
+import com.example.todotask.Model.Task;
+import com.example.todotask.Adapter.TaskAdapter;
 
 import java.util.ArrayList;
 

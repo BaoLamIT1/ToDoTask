@@ -1,4 +1,4 @@
-package com.example.todotask;
+package com.example.todotask.Fragment;
 
 import android.os.Bundle;
 
@@ -9,6 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.todotask.R;
 
 
 public class HelpFragment extends Fragment {

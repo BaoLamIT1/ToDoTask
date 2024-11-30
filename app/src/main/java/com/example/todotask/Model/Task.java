@@ -1,4 +1,4 @@
-package com.example.todotask;
+package com.example.todotask.Model;
 
 public class Task {
     private int IdTask;

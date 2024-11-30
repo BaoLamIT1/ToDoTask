@@ -1,4 +1,4 @@
-package com.example.todotask;
+package com.example.todotask.Fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,6 +11,8 @@ import android.widget.RatingBar;
 
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.fragment.app.Fragment;
+
+import com.example.todotask.R;
 
 public class RateFragment extends Fragment {
     private float userRate = 0;

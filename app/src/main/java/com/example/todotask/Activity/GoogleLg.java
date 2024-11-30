@@ -1,4 +1,4 @@
-package com.example.todotask;
+package com.example.todotask.Activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,6 +8,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.todotask.R;
 
 public class GoogleLg extends AppCompatActivity {
     private EditText edEmail, edPass;

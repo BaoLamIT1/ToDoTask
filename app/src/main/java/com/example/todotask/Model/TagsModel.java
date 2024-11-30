@@ -1,4 +1,6 @@
-package com.example.todotask;
+package com.example.todotask.Model;
+
+import com.example.todotask.R;
 
 public class TagsModel {
     private int idTag;

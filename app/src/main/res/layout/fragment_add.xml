@@ -7,7 +7,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:focusableInTouchMode="true"
     style="@style/ScreenBackground"
-    tools:context=".AddFragment">
+    tools:context=".Fragment.AddFragment">
 
     <TextView
         android:id="@+id/textViewNewTask"

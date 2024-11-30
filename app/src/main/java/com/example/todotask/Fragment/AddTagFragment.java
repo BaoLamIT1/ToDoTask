@@ -1,4 +1,4 @@
-package com.example.todotask;
+package com.example.todotask.Fragment;
 
 import android.os.Bundle;
 
@@ -15,15 +15,18 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
+import com.example.todotask.CreateDatabase;
+import com.example.todotask.R;
+import com.example.todotask.TagAddIconAdapter;
+import com.example.todotask.TagIconListener;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 
 import yuku.ambilwarna.AmbilWarnaDialog;
 
-public class AddTagFragment extends Fragment implements TagIconListener{
+public class AddTagFragment extends Fragment implements TagIconListener {
 
     private EditText edTagId;
     private EditText edTagName;
@@ -39,7 +42,7 @@ public class AddTagFragment extends Fragment implements TagIconListener{
     private RecyclerView recyclerIconView;
 
     private ArrayList<Integer> imageList;
-    private  TagAddIconAdapter tagAddIconAdapter;
+    private TagAddIconAdapter tagAddIconAdapter;
 
     private TextView txtTitle;
 

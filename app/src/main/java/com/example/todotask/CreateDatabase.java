@@ -52,17 +52,25 @@ public class CreateDatabase extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
 
-        String tbTask = "CREATE TABLE IF NOT EXISTS " + TB_TASK + "(" + TB_TASK_ID + " INTEGER PRIMARY KEY AUTOINCREMENT,  "
-                + TB_TASK_NAME + " TEXT, " +TB_TASK_DATE + " TEXT, " + TB_TASK_START + " TEXT, " + TB_TASK_END + " TEXT, "
+        String tbTask = "CREATE TABLE IF NOT EXISTS " + TB_TASK + " ("
+                + TB_TASK_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
+                + TB_TASK_NAME + " TEXT, "
+                + TB_TASK_DATE + " TEXT, "
+                + TB_TASK_START + " TEXT, "
+                + TB_TASK_END + " TEXT, "
                 + TB_TASK_REPEAT + " TEXT, "
                 + TB_TASK_TAG + " INTEGER, "
                 + TB_TASK_NOTIFICATION + " TEXT, "
-                + TB_TASK_CHECK + " INTEGER )";
-
-        String tbTag = "CREATE TABLE IF NOT EXISTS " + TB_TAG + " ( " + TB_TAG_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
-                +TB_TAG_NAME + " TEXT, " + TB_TAG_ICON + " INTEGER, "
-                +TB_TAG_COLOR + " INTEGER)";
+                + TB_TASK_CHECK + " INTEGER, "
+                + "FOREIGN KEY (" + TB_TASK_TAG + ") REFERENCES " + TB_TAG + "(" + TB_TAG_ID + ") ON DELETE CASCADE)";
         db.execSQL(tbTask);
+
+        String tbTag = "CREATE TABLE IF NOT EXISTS " + TB_TAG + " ("
+                + TB_TAG_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
+                + TB_TAG_NAME + " TEXT, "
+                + TB_TAG_ICON + " INTEGER, "
+                + TB_TAG_COLOR + " INTEGER)";
+
         db.execSQL(tbTag);
     }
 

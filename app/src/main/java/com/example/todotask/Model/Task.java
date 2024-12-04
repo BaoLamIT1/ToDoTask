@@ -10,11 +10,9 @@ public class Task {
     private int Tag;
     private String Notification;
     private int Checked;
-
     public Task() {
 
     }
-
     public Task(int idTask, String NameTask, String Date, String TimeStart, String TimeEnd, String Repeat, int Tag, String Notification) {
         this.IdTask = idTask;
         this.NameTask = NameTask;

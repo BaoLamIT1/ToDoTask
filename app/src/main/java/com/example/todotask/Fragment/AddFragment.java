@@ -56,6 +56,7 @@ public class AddFragment extends Fragment implements TagIconListener {
 
     private CreateDatabase data;
 
+
     private int hour , minutes; // This 2 variable for selectedTimeStart
     private AutoCompleteTextView dropDownMenuRepeat;
     //    String[] options = new String[]{"Do not repeat", "Daily","Weekly","Monthly","Annually"};
@@ -83,6 +84,8 @@ public class AddFragment extends Fragment implements TagIconListener {
         fab = v.findViewById(R.id.add_fab);
 
         data = new CreateDatabase(getContext());
+       // data.insertSampleData();
+
 
         //tags
         getData();
@@ -182,6 +185,7 @@ public class AddFragment extends Fragment implements TagIconListener {
                     CalendarFragment calendarFragment = new CalendarFragment();
                     calendarFragment.setArguments(b);
                     getFragmentManager().beginTransaction().replace(R.id.frame_layout, calendarFragment).commit();
+                    Toast.makeText(getContext(), "Task added successfully! ID: " + id, Toast.LENGTH_SHORT).show();
                 }
                 catch (NumberFormatException e)
                 {

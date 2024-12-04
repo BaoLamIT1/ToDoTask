@@ -46,6 +46,8 @@ public class CalendarFragment extends Fragment implements TagIconListener {
 
         listTask = v.findViewById(R.id.recyclerView_Task);
         data = new CreateDatabase(getContext());
+        data.insertSampleData();
+
         //getData();
         calendarView = v.findViewById(R.id.calendarView);
         taskAdapter = new TaskAdapter(getContext(), taskArrayList, tagsModels, this, data);
@@ -172,7 +174,6 @@ public class CalendarFragment extends Fragment implements TagIconListener {
                // taskArrayList.add(newTask);
                 data.addRepeatingTask(NameTask, DateTask,
                         TimeStart, TimeEnd, Repeat, TagID, "test");
-              //  taskAdapter.notifyDataSetChanged();
             }
         }
     }
@@ -206,15 +207,9 @@ public class CalendarFragment extends Fragment implements TagIconListener {
         bundleEdit.putString("TaskTEndEdit", timeEnd);
         bundleEdit.putString("TaskRepeatEdit", repeat);
         bundleEdit.putInt("TaskTagEdit", idTag);
-
-
-
-
 //
         AddFragment taskAddFragment = new AddFragment();
         taskAddFragment.setArguments(bundleEdit);
-//
-//
         getFragmentManager().beginTransaction().replace(R.id.frame_layout, taskAddFragment).commit();
     }
 }

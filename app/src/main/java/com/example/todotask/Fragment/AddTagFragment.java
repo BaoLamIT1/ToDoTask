@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.todotask.CreateDatabase;
 import com.example.todotask.R;
@@ -100,6 +101,7 @@ public class AddTagFragment extends Fragment implements TagIconListener {
 
         receiveData();
 
+
         btnColor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -123,9 +125,8 @@ public class AddTagFragment extends Fragment implements TagIconListener {
 
                 TagFragment tagFragment = new TagFragment();
                 tagFragment.setArguments(bundle);
-
-
                 getFragmentManager().beginTransaction().replace(R.id.frame_layout, tagFragment).commit();
+                Toast.makeText(getContext(), "Tag added successfully! ID: " + id, Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -151,6 +152,9 @@ public class AddTagFragment extends Fragment implements TagIconListener {
         });
 
         return tagAddView;
+    }
+    private void insertTagSample(String name, int icon, int color){
+
     }
     private void openColorPicker() {
         AmbilWarnaDialog ambilWarnaDialog = new AmbilWarnaDialog(getContext(), defaultcolor, new AmbilWarnaDialog.OnAmbilWarnaListener() {

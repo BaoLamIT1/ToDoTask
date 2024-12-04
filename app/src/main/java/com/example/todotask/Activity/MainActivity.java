@@ -7,6 +7,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 
+import com.example.todotask.CreateDatabase;
 import com.example.todotask.Fragment.AddFragment;
 import com.example.todotask.Fragment.CalendarFragment;
 import com.example.todotask.Fragment.MenuFragment;
@@ -18,13 +19,13 @@ public class MainActivity extends AppCompatActivity {
 
     ActivityMainBinding binding;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         replaceFragment(new CalendarFragment());
+
 
         binding.bottomNavigation.setOnItemSelectedListener(item -> {
             int id = item.getItemId();

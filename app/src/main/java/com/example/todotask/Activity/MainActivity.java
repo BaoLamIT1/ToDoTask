@@ -18,27 +18,26 @@ import com.example.todotask.databinding.ActivityMainBinding;
 public class MainActivity extends AppCompatActivity {
 
     ActivityMainBinding binding;
+    CalendarFragment calendarFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        replaceFragment(new CalendarFragment());
 
+        if (savedInstanceState == null) {
+            // Chỉ thay fragment nếu không có trạng thái trước đó
+            replaceFragment(new CalendarFragment());
+        }
 
         binding.bottomNavigation.setOnItemSelectedListener(item -> {
             int id = item.getItemId();
-            if (id == R.id.bottom_navigation_calendar)
-            {
+            if (id == R.id.bottom_navigation_calendar) {
                 replaceFragment(new CalendarFragment());
-            }
-            else if (id == R.id.bottom_navigation_menu)
-            {
+            } else if (id == R.id.bottom_navigation_menu) {
                 replaceFragment(new MenuFragment());
-            }
-            else if (id == R.id.bottom_navigation_tag)
-            {
+            } else if (id == R.id.bottom_navigation_tag) {
                 replaceFragment(new TagFragment());
             } else if (id == R.id.bottom_navigation_add) {
                 replaceFragment(new AddFragment());

@@ -185,7 +185,7 @@ public class AddFragment extends Fragment implements TagIconListener {
                     CalendarFragment calendarFragment = new CalendarFragment();
                     calendarFragment.setArguments(b);
                     getFragmentManager().beginTransaction().replace(R.id.frame_layout, calendarFragment).commit();
-                    Toast.makeText(getContext(), "Task added successfully! ID: " + id, Toast.LENGTH_SHORT).show();
+                 //   Toast.makeText(getContext(), "Task added successfully! ID: " + id, Toast.LENGTH_SHORT).show();
                 }
                 catch (NumberFormatException e)
                 {
@@ -193,13 +193,8 @@ public class AddFragment extends Fragment implements TagIconListener {
                 }
             }
         });
-
         //nhan data
         receiveData();
-
-
-
-
         return v;
     }
     // C1:

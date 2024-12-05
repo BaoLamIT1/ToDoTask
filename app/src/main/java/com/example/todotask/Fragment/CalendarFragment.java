@@ -69,7 +69,6 @@ public class CalendarFragment extends Fragment implements TagIconListener {
                         ItemTouchHelper.START);
                 //return 0;
             }
-
             @Override
             public boolean onMove(@NonNull RecyclerView recyclerView,
                                   @NonNull RecyclerView.ViewHolder viewHolder,
@@ -80,8 +79,6 @@ public class CalendarFragment extends Fragment implements TagIconListener {
 //                Collections.swap(taskArrayList, draggedItemIndex, targetIndex);
 //
 //                taskAdapter.notifyItemMoved(draggedItemIndex, targetIndex);
-
-
                 return false;
             }
 
@@ -98,9 +95,6 @@ public class CalendarFragment extends Fragment implements TagIconListener {
                         }else Toast.makeText(getContext(), "khongthay", Toast.LENGTH_SHORT).show();
 
                         data.PutToBin(currentTask.getIdTask());
-
-
-
                         taskArrayList.remove(viewHolder.getAdapterPosition());
                         listTask.removeViewAt(viewHolder.getAdapterPosition());
                         taskAdapter.notifyItemRemoved(viewHolder.getAdapterPosition());
@@ -177,15 +171,11 @@ public class CalendarFragment extends Fragment implements TagIconListener {
             }
         }
     }
-
     private void getData(){
         taskArrayList = new ArrayList<>();
         taskArrayList = data.getDateTask("29/3/2024");
 
     }
-
-
-
     @Override
     public void onIconClick(Integer item) {
 

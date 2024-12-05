@@ -155,7 +155,7 @@ public class CreateDatabase extends SQLiteOpenHelper {
         contentValues.put(TB_TAG_ICON,Icon);
         contentValues.put(TB_TAG_COLOR,Color);
         long result =  db.insert(TB_TAG,null,contentValues);
-        //CHI DE CHECK
+//        //CHI DE CHECK
 //        if (result == -1){
 //            Toast.makeText(context, "Failed", Toast.LENGTH_SHORT).show();
 //        }
@@ -163,6 +163,7 @@ public class CreateDatabase extends SQLiteOpenHelper {
 //            Toast.makeText(context, "Success", Toast.LENGTH_SHORT).show();
 //        }
         db.close();
+
     }
     //
     public void UpdateTag (int id, String Name, int Icon, int Color ){
@@ -270,13 +271,13 @@ public class CreateDatabase extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(TB_TASK_CHECK, 0);
-//        long result = db.update(TB_TASK, contentValues, "TASK_ID = ?",new String[]{String.valueOf(id)});
-//        if (result == -1){
-//            Toast.makeText(context, "Failed", Toast.LENGTH_SHORT).show();
-//        }
-//        else {
-//            Toast.makeText(context, "Success", Toast.LENGTH_SHORT).show();
-//        }
+        long result = db.update(TB_TASK, contentValues, "TASK_ID = ?",new String[]{String.valueOf(id)});
+        if (result == -1){
+            Toast.makeText(context, "Failed", Toast.LENGTH_SHORT).show();
+        }
+        else {
+            Toast.makeText(context, "Success", Toast.LENGTH_SHORT).show();
+        }
         db.close();
     }
     public void Putback(int id){

@@ -97,7 +97,7 @@ public class CreateDatabase extends SQLiteOpenHelper {
                     "Do not repeat", 3, "1", "test");
             insertTask(db, "READ BOOKS", "10/12/2024", "18:30", "19:00",
                     "Do not repeat", 4, "1", "test");
-            insertTask(db, "EXAM", "6/12/2024", "09:30", "10:30",
+            insertTask(db, "EXAM", "11/12/2024", "09:30", "10:30",
                     "Do not repeat", 5, "1", "test");
         }
         db.close();
